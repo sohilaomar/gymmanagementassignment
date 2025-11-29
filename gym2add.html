@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lean Gym — Add Client</title>
+  <link rel="stylesheet" href="style2.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Lean Gym</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="gym2add.html" class="nav-link active">Add Client</a></li>
+      <li><a href="gym2view.html" class="nav-link">View Members</a></li>
+      <li><a href="gym2stats.html" class="nav-link">Statistics</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <section class="panel">
+      <h2 class="section-title">Add New Client</h2>
+
+      <form id="addClientForm" class="form">
+        <label for="name">Client Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="age">Age (min 16)</label>
+        <input id="age" name="age" type="number" min="16" required />
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Select gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required />
+
+        <label for="goal">Fitness Goal</label>
+        <select id="goal" name="goal" required>
+          <option>Weight Loss</option>
+          <option>Muscle Gain</option>
+          <option>Build Endurance</option>
+          <option>Enjoyment</option>
+          <option>Personal</option>
+        </select>
+
+        <label for="start">Membership Start Date</label>
+        <input id="start" name="start" type="date" required />
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Add Client</button>
+          <button type="reset" class="btn outline">Reset</button>
+        </div>
+      </form>
+
+      <div id="toast" class="toast" aria-hidden="true">Client added successfully</div>
+    </section>
+  </main>
+</body>
+</html>
