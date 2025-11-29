@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lean Gym — Members</title>
+  <link rel="stylesheet" href="style2.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Lean Gym</div>
+    <ul class="nav-links">
+      <li><a href="html.html" class="nav-link">Home</a></li>
+      <li><a href="gym2add.html" class="nav-link">Add Client</a></li>
+      <li><a href="gym2view.html" class="nav-link active">View Members</a></li>
+      <li><a href="gym2stats.html" class="nav-link">Statistics</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <section class="panel">
+      <h2 class="section-title">Client Directory</h2>
+
+      <div class="controls-row">
+        <input id="searchMember" type="text" placeholder="Search by name, email or phone" />
+        <button id="searchBtn" class="btn small">Search</button>
+
+        <select id="sortMembers" aria-label="Sort members">
+          <option value="">Sort By</option>
+          <option value="name">Name A–Z</option>
+          <option value="age">Age</option>
+          <option value="start">Start Date</option>
+        </select>
+      </div>
+
+      <div id="memberList" class="members-list"></div>
+    </section>
+  </main>
+
+<!-- Personal Client Modal -->
+<div id="clientModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2 id="modalName">Client Name</h2>
+    <p><strong>Age:</strong> <span id="modalAge"></span></p>
+    <p><strong>Gender:</strong> <span id="modalGender"></span></p>
+    <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+    <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+    <p><strong>Goal:</strong> <span id="modalGoal"></span></p>
+    <p><strong>Start Date:</strong> <span id="modalStart"></span></p>
+    <p><strong>Training History:</strong> <span id="modalHistory"></span></p>
+    <p><strong>Next Session Exercises:</strong> <span id="modalNextExercises"></span></p>
+  </div>
+</div>
+
+</body>
+</html>
